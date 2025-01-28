@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../images/logo.png'
-import './signup.css'
+import '../style/signUp.css'
 
 export default function SignUp() {
   return (
