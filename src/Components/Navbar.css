@@ -19,8 +19,15 @@ li {
 }
 
 
-a{
+a {
     text-decoration: none;
     color: black;
     font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    img {
+        width: 20%;
+        object-fit: contain;
+    }
 }
