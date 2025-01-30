@@ -1,19 +1,19 @@
 const express = require('express');
 const app = express();
-// const data=require('./data')
 const cors = require("cors")
 const PORT = 3000;
-const mongoose = require('mongoose')
-const dotenv = require('dotenv')
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 require('dotenv').config()
+require('./modals/modal');
+app.use(express.json());
+app.use(require('./routes/auth'));
 
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.json(data);
+    res.json({ message: 'API Working' });
 })
-
-console.log(process.env.MONGO_URL)
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {
